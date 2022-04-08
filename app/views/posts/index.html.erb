@@ -1,0 +1,20 @@
+<br><br>
+<%= pagy_bulma_nav(@pagy).html_safe %><hr>
+
+<% @posts.each do |post| %>
+<h2> <%= post.title %> </h2>
+<div> <%= truncate(post.body, :length => 35) %> </div><br>
+<br>
+
+<%= link_to 'Read Post', post %>
+<% end %>
+
+
+
+
+
+<br><br><hr>
+<%= pagy_bulma_nav(@pagy).html_safe %>
+
+
+<%= button_to "Click Here", prac_path, method: :get %>
